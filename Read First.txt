@@ -1,0 +1,7 @@
+Admin Password: saifur
+
+
+
+Demo student panel:
+	Username: Saifur
+	Password: 123
