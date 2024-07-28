@@ -5,6 +5,8 @@
 #include <time.h>
 #include <string.h>
 
+
+
 void main_menu();
 void gotocr(int, int);
 void admin_login_f();
@@ -32,13 +34,17 @@ typedef struct catagory
     char dept[10];
     long int number;
 }cat;
+
 cat mem;
 int i, point;
 char sign= 176;
+
+
 int main()
 {
     main_menu();
 }
+
 void main_menu()
 {
     char sign=176;
@@ -67,6 +73,7 @@ void main_menu()
             main_menu();
 	}
 }
+
 void admin_login_f()
 {
     system("cls");
@@ -101,6 +108,7 @@ void admin_login_f()
         admin_login_f();
     }
 }
+
 void admin_home_f()
 {
     system("cls");
@@ -143,6 +151,7 @@ void admin_home_f()
         break;
     }
 }
+
 void aStudent()
 {
     system("cls");
@@ -197,6 +206,7 @@ void aStudent()
     }
 
 }
+
 void aTeacher()
 {
     system("cls");
@@ -250,6 +260,7 @@ void aTeacher()
         }
     }
 }
+
 void aClubs()
 {
     system("cls");
@@ -289,6 +300,7 @@ void aClubs()
             aClubs();
     }
 }
+
 void std_login_f()
 {
     system("cls");
@@ -352,6 +364,7 @@ void std_login_f()
     fclose(fptr);
     std_home_f();
 }
+
 void std_home_f()
 {
     system("cls");
@@ -395,6 +408,7 @@ void std_home_f()
             std_home_f();
     }
 }
+
 void show_club_list()
 {
     system("cls");
@@ -412,6 +426,7 @@ void show_club_list()
         printf("%d. %s",i++, read);
     }
 }
+
 void add_club()
 {
     system("cls");
@@ -447,6 +462,7 @@ void add_club()
         goto jump;
     }
 }
+
 void sub_list_f()
 {
     system("cls");
@@ -653,6 +669,7 @@ void sub_list_f()
         sub_list_f();
     }
 }
+
 void add_member_f(char fname[])
 {
     system("cls");
@@ -718,6 +735,7 @@ void add_member_f(char fname[])
         }
     }
 }
+
 void show_mem_f()
 {
     system("cls");
@@ -763,6 +781,7 @@ void show_mem_f()
         aTeacher();
     }
 }
+
 void add_std_panel()
 {
     system("cls");
@@ -1021,6 +1040,7 @@ void search_mem_f()
         goto jump;
     }
 }
+
 void mod_mem_f()
 {
     system("cls");
@@ -1127,6 +1147,7 @@ void mod_mem_f()
         break;
     }
 }
+
 void del_mem_f()
 {
     jump2:
@@ -1260,6 +1281,7 @@ void del_mem_f()
         }
     }
 }
+
 void gotocr(int col, int row)
 {
     COORD coord={0,0};
@@ -1267,6 +1289,7 @@ void gotocr(int col, int row)
     coord.Y= row;
     SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), coord);
 }
+
 void quite_f()
 {
     system("cls");
